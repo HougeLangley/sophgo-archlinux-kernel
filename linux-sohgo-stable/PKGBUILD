@@ -4,6 +4,7 @@ _compress_modules=n
 _compiler=gcc 
 _makenconfig=n
 pkgbase=linux-sophgo-stable
+_pkgarch=riscv
 _major=6.1
 pkgver=${_major}.31
 _branch=6.x
@@ -11,7 +12,7 @@ _commit="2a43515709efd77e085bb3e3e6e3f1f9f836b7a0"
 pkgrel=1
 pkgdesc='Vendor Linux Kernel By Sophgo To Archlinux'
 url="https://milkv.io/docs/pioneer/overview"
-arch=(riscv)
+arch=(riscv64)
 
 license=(GPL2)
 makedepends=(
@@ -37,9 +38,9 @@ makedepends=(
 )
 
 options=('!strip')
-_srcname="linux-${arch}-${_commit}"
+_srcname="linux-${_pkgarch}-${_commit}"
 
-source=("https://github.com/sophgo/linux-${arch}/archive/${_commit}.tar.gz"
+source=("https://github.com/sophgo/linux-${_pkgarch}/archive/${_commit}.tar.gz"
         "config")
 
 b2sums=('442ed326ca941bdd5937dad82e64abed0ffb8a918f208b720894617e3a4f4aa8f5c599bdc1242926dfa8d8b9437169b70a48653822410fa4a55659ea65760325'
