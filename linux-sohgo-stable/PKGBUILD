@@ -2,14 +2,14 @@ use_numa=y
 use_tracers=n
 _compress_modules=n
 _compiler=gcc 
-_makenconfig=n
+_makenconfig=y
 pkgbase=linux-sophgo-stable
 _pkgarch=riscv
 _major=6.1
 pkgver=${_major}.31
 _branch=6.x
-_commit="2a43515709efd77e085bb3e3e6e3f1f9f836b7a0"
-pkgrel=1
+_commit="2041bd8fa71e7b4827a04e91deb7843fa98fbcb7"
+pkgrel=2
 pkgdesc='Vendor Linux Kernel By Sophgo To Archlinux'
 url="https://milkv.io/docs/pioneer/overview"
 arch=(riscv64)
@@ -43,8 +43,8 @@ _srcname="linux-${_pkgarch}-${_commit}"
 source=("https://github.com/sophgo/linux-${_pkgarch}/archive/${_commit}.tar.gz"
         "config")
 
-b2sums=('442ed326ca941bdd5937dad82e64abed0ffb8a918f208b720894617e3a4f4aa8f5c599bdc1242926dfa8d8b9437169b70a48653822410fa4a55659ea65760325'
-        '14f3fb357e75def2472b5b984b8c52d55d2b080ddd6ecc10dccf556a6295473ad30cd5341277a56a17d65dbcceda1c3944269cd7ef4755c7fdc86adc730e582b')
+b2sums=('ed7ea76a98b17c1e66cb827ae819915d79fba24371b14f85de642b36835d37b4c8bf3cf0ae40ac7d0dba44e0d352a24a838e7743c58575a814559aed75e1786b'
+        'fd3f91c4f690a64bd7523b15ae3fb7867a1892ac808500cf212bc243fb31399e47505f0da2415f78f890bd314f366451e3ba96012f20ec1c2d13a0a958911b5b')
 
 export KBUILD_BUILD_HOST=${KBUILD_BUILD_HOST:-archlinux}
 export KBUILD_BUILD_USER=${KBUILD_BUILD_USER:-makepkg}
