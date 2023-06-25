@@ -1,8 +1,4 @@
-use_numa=y
-use_tracers=n
-_compress_modules=n
-_compiler=gcc 
-_makenconfig=y
+_makenconfig=n
 pkgbase=linux-sophgo-stable
 _pkgarch=riscv
 _major=6.1
@@ -55,20 +51,6 @@ prepare() {
 
   # Applying configuration
   cp -vf ../config .config
-
-  # User set. See at the top of this file
-  if [ "$use_tracers" = "n" ]; then
-    echo "Disabling FUNCTION_TRACER/GRAPH_TRACER only if we are not compiling with clang..."
-    if [ "${_compiler}" = "gcc" ]; then
-      scripts/config --disable CONFIG_FUNCTION_TRACER \
-                     --disable CONFIG_STACK_TRACER
-    fi
-  fi
-
-  if [ "$use_numa" = "n" ]; then
-    echo "Disabling NUMA..."
-    scripts/config --disable CONFIG_NUMA
-  fi
 
   make olddefconfig
 
