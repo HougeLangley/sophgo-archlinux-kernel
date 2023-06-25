@@ -40,7 +40,7 @@ source=("https://github.com/sophgo/linux-${_pkgarch}/archive/${_commit}.tar.gz"
         "config")
 
 b2sums=('ed7ea76a98b17c1e66cb827ae819915d79fba24371b14f85de642b36835d37b4c8bf3cf0ae40ac7d0dba44e0d352a24a838e7743c58575a814559aed75e1786b'
-        '5543cd89b4d6ccff0465a0f00ab7b3266b1b78703d2c61902e6d2413875740f71b03d9371849d1d77aec2f8c99f5ed1367c387b42f29dd4926d1f1d268af46a1')
+        '6bb23ba3fca0855745d2823a23c43326d1ee4de056922203e481d3b894d782b7a8a2ed1d2b434363322d17478eaff4f2d1df6491a75e5c60094b4cae2034e3ba')
 
 export KBUILD_BUILD_HOST=${KBUILD_BUILD_HOST:-archlinux}
 export KBUILD_BUILD_USER=${KBUILD_BUILD_USER:-makepkg}
