@@ -1,7 +1,3 @@
-use_numa=y
-use_tracers=n
-_compress_modules=n
-_compiler=gcc 
 _makenconfig=n
 pkgbase=linux-sophgo-stable-rc
 _pkgarch=riscv
@@ -44,7 +40,7 @@ source=("https://github.com/sophgo/linux-${_pkgarch}/archive/${_commit}.tar.gz"
         "config")
 
 b2sums=('ab35e7fb6fea5e300121780202ecec1b3e61413d92bcfc7ae25857bc773fd3cff1c9220abe3c5ff446cd69df2572b69944d9dfbbff6ff1a28b3d17b9a23aa8e0'
-        '5543cd89b4d6ccff0465a0f00ab7b3266b1b78703d2c61902e6d2413875740f71b03d9371849d1d77aec2f8c99f5ed1367c387b42f29dd4926d1f1d268af46a1')
+        '41fd3c2136d85ac82ce74ce1e481f8c7031b61a75f47e4ee794e45b8210d5454ee0c8eb2b3aaeac3aa908c14c3dd7c0d128579fde2430ea2c1ae57bfb543dd5e')
 
 export KBUILD_BUILD_HOST=${KBUILD_BUILD_HOST:-archlinux}
 export KBUILD_BUILD_USER=${KBUILD_BUILD_USER:-makepkg}
@@ -55,20 +51,6 @@ prepare() {
 
   # Applying configuration
   cp -vf ../config .config
-
-  # User set. See at the top of this file
-  if [ "$use_tracers" = "n" ]; then
-    echo "Disabling FUNCTION_TRACER/GRAPH_TRACER only if we are not compiling with clang..."
-    if [ "${_compiler}" = "gcc" ]; then
-      scripts/config --disable CONFIG_FUNCTION_TRACER \
-                     --disable CONFIG_STACK_TRACER
-    fi
-  fi
-
-  if [ "$use_numa" = "n" ]; then
-    echo "Disabling NUMA..."
-    scripts/config --disable CONFIG_NUMA
-  fi
 
   make olddefconfig
 
