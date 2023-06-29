@@ -4,8 +4,8 @@ _pkgarch=riscv
 _major=6.1
 pkgver=${_major}.31
 _branch=6.x
-_commit="2041bd8fa71e7b4827a04e91deb7843fa98fbcb7"
-pkgrel=2
+_commit="721dc999eefc767f5f3dab778ce06b7261daa25d"
+pkgrel=3
 pkgdesc='Vendor Linux Kernel By Sophgo To Archlinux'
 url="https://milkv.io/docs/pioneer/overview"
 arch=(riscv64)
@@ -39,7 +39,7 @@ _srcname="linux-${_pkgarch}-${_commit}"
 source=("https://github.com/sophgo/linux-${_pkgarch}/archive/${_commit}.tar.gz"
         "config")
 
-b2sums=('ed7ea76a98b17c1e66cb827ae819915d79fba24371b14f85de642b36835d37b4c8bf3cf0ae40ac7d0dba44e0d352a24a838e7743c58575a814559aed75e1786b'
+b2sums=('d8e16e0c2bbf6f4d7a4bb292e8c308892035ca4430a606d516a8c4e1aeebc029309192a3da84a0049714c7e4734fb13640a6114a5361a547a6612e05ecfefd61'
         '41fd3c2136d85ac82ce74ce1e481f8c7031b61a75f47e4ee794e45b8210d5454ee0c8eb2b3aaeac3aa908c14c3dd7c0d128579fde2430ea2c1ae57bfb543dd5e')
 
 export KBUILD_BUILD_HOST=${KBUILD_BUILD_HOST:-archlinux}
