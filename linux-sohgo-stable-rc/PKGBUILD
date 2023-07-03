@@ -1,11 +1,11 @@
 _makenconfig=n
 pkgbase=linux-sophgo-stable-rc
 _pkgarch=riscv
-_major=6.5
+_major=6.4
 pkgver=${_major}.0
 _branch=6.x
 _commit="bca00b20f4ed2da0bad47129f9e619facc4904ff"
-pkgrel=1
+pkgrel=2
 pkgdesc='Vendor Linux Kernel By Sophgo To Archlinux'
 url="https://milkv.io/docs/pioneer/overview"
 arch=(riscv64)
