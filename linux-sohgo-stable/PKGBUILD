@@ -39,8 +39,8 @@ _srcname="linux-${_pkgarch}-${_commit}"
 source=("https://github.com/sophgo/linux-${_pkgarch}/archive/${_commit}.tar.gz"
         "config")
 
-b2sums=('d8e16e0c2bbf6f4d7a4bb292e8c308892035ca4430a606d516a8c4e1aeebc029309192a3da84a0049714c7e4734fb13640a6114a5361a547a6612e05ecfefd61'
-        '41fd3c2136d85ac82ce74ce1e481f8c7031b61a75f47e4ee794e45b8210d5454ee0c8eb2b3aaeac3aa908c14c3dd7c0d128579fde2430ea2c1ae57bfb543dd5e')
+b2sums=('SKIP'
+        'SKIP')
 
 export KBUILD_BUILD_HOST=${KBUILD_BUILD_HOST:-archlinux}
 export KBUILD_BUILD_USER=${KBUILD_BUILD_USER:-makepkg}
